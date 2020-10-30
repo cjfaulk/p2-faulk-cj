@@ -8,12 +8,18 @@
 }
 
 body {
-  font-family: @font;
+  .body-font();
+}
+
+.hide {
+  display: none;
 }
 
 // Header styling
 
 header {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px 0;
   .desktop-nav {
     display: none;
   }
@@ -120,28 +126,46 @@ header {
 }
 
 
+
+// index.html Styling
+
+#home-main {
+  .hero {
+    background: url("../images/books.jpg") center no-repeat;
+    height: 90vh;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+  }
+}
+
+
 // START 600px Media Query
 
 @media (min-width: 600px) {
 
   //Header Styling
   header {
+    height: 150px;
     .mobile-nav {
       display: none;
     }
-    #mobile-logo {
+    .mobile-logo {
       display: none;
     }
     .desktop-nav {
       display: block;
-      display: flex;
-      align-items: center;
-      margin: 0 10%;
+      margin: 20px;
       #desktop-logo {
         width: 200px;
+        position: absolute;
+        top: 40px;
+        left: 10%;
       }
       nav {
-        margin-left: 10%;
+        margin: 50px 0 0 300px;
         ul {
           li {
             display: inline-block;
@@ -149,14 +173,28 @@ header {
             padding: 10px;
             a {
               text-decoration: none;
-              color: @blue;
+              color: @black;
             }
             a:hover {
-              color: @black;
+              color: @blue;
               transition: .2s;
             }
           }
         }
+      }
+    }
+  }
+}
+
+// START 1000px Media Query
+
+@media (min-width: 1000px) {
+
+  // Header styling
+  header {
+    .desktop-nav {
+      #desktop-logo {
+        left: 100px;
       }
     }
   }
