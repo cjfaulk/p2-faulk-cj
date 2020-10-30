@@ -134,10 +134,30 @@ header {
     }
     .desktop-nav {
       display: block;
+      display: flex;
+      align-items: center;
+      margin: 0 10%;
       #desktop-logo {
         width: 200px;
       }
+      nav {
+        margin-left: 10%;
+        ul {
+          li {
+            display: inline-block;
+            list-style-type: none;
+            padding: 10px;
+            a {
+              text-decoration: none;
+              color: @blue;
+            }
+            a:hover {
+              color: @black;
+              transition: .2s;
+            }
+          }
+        }
+      }
     }
   }
-
 }
