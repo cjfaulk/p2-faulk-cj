@@ -19,7 +19,7 @@ body {
   opacity: 50%;
 }
 
-// Header styling
+// index.html Header styling
 
 #home-header {
   background-color: rgba(255, 255, 255, 0.9);
@@ -129,43 +129,10 @@ body {
   }
 }
 
-// Footer styling
-
-#home-footer {
-  background-color: @black;
-  text-align: center;
-  img {
-    width: 80%;
-    max-width: 200px;
-    padding: 20px;
-  }
-  nav {
-    ul {
-      li {
-        list-style-type: none;
-        padding: 20px;
-      }
-    }
-    a {
-      color: white;
-      text-decoration: none;
-    }
-    a:hover {
-      color: @yellow;
-    }
-  }
-}
-
 // index.html Styling
 
-#home-body {
-  display: flex;
-  min-height: 250vh;
-  flex-direction: column;
-}
-
 #home-main {
-  flex: 1;
+  margin-bottom: 600px;
   .hero {
     background: url("../images/books.jpg") center no-repeat;
     height: 90vh;
@@ -191,6 +158,52 @@ body {
         }
       }
     }
+    .home-photo-links {
+      text-align: center;
+      margin: 75px auto;
+      padding: 20px 0;
+      .home-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px auto;
+        h2 {
+          width: 100%;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      a:hover {
+        color: @yellow;
+        transition: .2s;
+      }
+      #home-free-books {
+        background: url("../images/reading-kid.jpg") center no-repeat;
+        height: 300px;
+        max-width: 300px;
+        h2 {
+          background-color: @pink;
+        }
+      }
+      #home-partnerships {
+        background: url("../images/hidden-figures.jpg") center no-repeat;
+        height: 300px;
+        max-width: 300px;
+        h2 {
+          background-color: @blue;
+        }
+      }
+      #home-learn {
+        background: url("../images/hate-u-give.jpg") center no-repeat;
+        height: 300px;
+        max-width: 300px;
+        h2 {
+          background-color: @green;
+        }
+      }
+    }
   }
   #word-wrapper {
     text-align: center;
@@ -199,13 +212,56 @@ body {
       color: @blue;
     }
   }
+  .support-button {
+    text-align: center;
+    margin: 50px 0;
+    a {
+      text-decoration: none;
+      color: white;
+      background-color: @pink;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    a:hover {
+      background-color: @green;
+      transition: .2s;
+    }
+  }
+}
+
+// index.html Footer styling
+
+#home-footer {
+  height: 10%;
+  background-color: @black;
+  text-align: center;
+  img {
+    width: 80%;
+    max-width: 200px;
+    padding: 20px;
+  }
+  nav {
+    ul {
+      li {
+        list-style-type: none;
+        padding: 20px;
+      }
+    }
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    a:hover {
+      color: @yellow;
+    }
+  }
 }
 
 // START 600px Media Query
 
 @media (min-width: 600px) {
 
-  //Header Styling
+  //index.html Header Styling
   #home-header {
     height: 150px;
     .mobile-nav {
@@ -244,7 +300,7 @@ body {
     }
   }
 
-  //Footer Styling
+  //index.html Footer Styling
   #home-footer {
     nav {
       ul {
@@ -258,6 +314,7 @@ body {
   // index.html Styling
 
   #home-main {
+    margin-bottom: 700px;
     #home-content {
       position: relative;
       top: 75vh;
@@ -268,11 +325,21 @@ body {
           }
         }
       }
+      .home-photo-links {
+        display: flex;
+        justify-content: center;
+        max-width: 625px;
+        #home-free-books, #home-partnerships {
+          width: 300px;
+        }
+        #home-learn {
+          height: 610px;
+        }
+      }
     }
   }
+
 }
-
-
 
 
 // START 1000px Media Query
@@ -287,4 +354,7 @@ body {
       }
     }
   }
+
+  // index.html styling
+
 }
