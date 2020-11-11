@@ -21,7 +21,7 @@ body {
 
 // Header styling
 
-header {
+#home-header {
   background-color: rgba(255, 255, 255, 0.9);
   padding: 20px 0;
   .desktop-nav {
@@ -129,9 +129,43 @@ header {
   }
 }
 
+// Footer styling
+
+#home-footer {
+  background-color: @black;
+  text-align: center;
+  img {
+    width: 80%;
+    max-width: 200px;
+    padding: 20px;
+  }
+  nav {
+    ul {
+      li {
+        list-style-type: none;
+        padding: 20px;
+      }
+    }
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    a:hover {
+      color: @yellow;
+    }
+  }
+}
+
 // index.html Styling
 
+#home-body {
+  display: flex;
+  min-height: 200vh;
+  flex-direction: column;
+}
+
 #home-main {
+  flex: 1;
   .hero {
     background: url("../images/books.jpg") center no-repeat;
     height: 90vh;
@@ -166,7 +200,7 @@ header {
 @media (min-width: 600px) {
 
   //Header Styling
-  header {
+  #home-header {
     height: 150px;
     .mobile-nav {
       display: none;
@@ -204,6 +238,17 @@ header {
     }
   }
 
+  //Footer Styling
+  #home-footer {
+    nav {
+      ul {
+        li {
+          display: inline-block;
+        }
+      }
+    }
+  }
+
   // index.html Styling
 
   #home-main {
@@ -229,7 +274,7 @@ header {
 @media (min-width: 1000px) {
 
   // Header styling
-  header {
+  #home-header {
     .desktop-nav {
       #desktop-logo {
         left: 100px;
