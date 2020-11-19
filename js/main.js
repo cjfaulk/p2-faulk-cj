@@ -13,3 +13,32 @@ xmlhttp.onreadystatechange = function() {
 };
 xmlhttp.open('GET', 'https://api.wordnik.com/v4/words.json/wordOfTheDay?api_key=kiwsji19uz5pmm10k06q2s5sutf99le8ot3rs21d1x8y9yhrr', true);
 xmlhttp.send();
+
+
+
+
+// Pop-up ad
+
+var modal = document.getElementById("myModal");
+
+var span = document.getElementsByClassName("close")[0];
+
+window.addEventListener("load",
+  function() {
+    setTimeout(showPopup, 3000);
+  });
+
+function showPopup() {
+  document.getElementById("myModal").style.opacity = 1;
+  document.getElementById("myModal").style.visibility = "visible";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
