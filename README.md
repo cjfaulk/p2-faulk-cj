@@ -10,3 +10,5 @@ Issues:
 I was having issues with the footer, so this link helped me with that: https://stackoverflow.com/questions/13881548/sticky-footer-hiding-content
 
 I also had to do a lot of trial and error for the popup ad, but I was able to figure it out.
+
+*Note - the non-profit does not currently have a Twitter, so the Twitter icon is just a placeholder link
